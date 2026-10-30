@@ -1,0 +1,13 @@
+@import "variables.css";
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-fam);
+    text-align: var(--center);
+}
+
+header {
+    background-color: var(--header-bg);
+    padding: var(--main-padding);
+    border-radius: var(--main-radius);
+}

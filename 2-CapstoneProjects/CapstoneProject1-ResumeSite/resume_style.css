@@ -1,0 +1,149 @@
+:root {
+    --bg-color: rgba(50, 50, 50, 1);
+    --h-color: rgb(180, 50, 180);
+    --secondary-color: rgb(50, 150, 255);
+    --date-color: rgb(20, 110, 170);
+    --job-color: rgb(0, 200, 180);
+    --text-color: rgb(255, 255, 255);
+    --section-bg: rgba(80, 80, 80, 0.25);
+    --link-color: rgb(0, 165, 180);
+    --hover-color: rgb(200, 200, 255);
+    --section-h-color: rgb(95, 25, 250);
+    --subTitle-color: rgb(185, 30, 205);
+
+    --btn-bg: rgb(95, 25, 250);
+    --btn-text: rgb(255, 255, 255);
+    --btn-hover-text: rgba(0, 165, 180, 1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.resume-header {
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+#resume-header-container {
+    position: relative;
+    border-radius: 8px;
+    padding: 2px 10px;
+    margin: 0px 5px 10px 5px;
+    color: var(--h-color);
+}
+
+.header-content {
+    text-align: center;
+}
+
+
+
+.me img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+
+#resume-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+}
+
+.navItem {
+    background-color: var(--section-bg);
+    display: flex;
+    margin: 20px;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 100px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.cert-link,
+.navItem {
+    text-decoration: none;
+    color: var(--link-color);
+    font-size: 1rem;
+}
+
+.cert-link:hover,
+.navItem:hover {
+    cursor: pointer;
+    color: var(--hover-color);
+}
+
+.cert-link {
+    padding-left: 10px;
+}
+
+/* unified section styling, now including #skills */
+#objective,
+#skills,
+#experience,
+.job-box,
+#school,
+#ciw,
+#coddy {
+    background-color: var(--section-bg);
+    border-radius: 8px;
+    padding: 2px 10px;
+    margin: 0px 5px 10px 5px;
+    color: var(--text-color);
+}
+
+#certifications,
+#school-box {
+    background-color: var(--section-bg);
+    border-radius: 8px;
+    padding: 5px;
+    margin: 0px 5px 10px 5px;
+    color: var(--text-color);
+}
+
+.job-subTitle {
+    color: var(--subTitle-color);
+}
+
+.certHeader {
+    color: var(--section-h-color);
+    padding-bottom: 1rem;
+}
+
+.sectionTitle {
+    color: var(--section-h-color);
+}
+
+.date {
+    color: var(--date-color);
+}
+
+.jobTitle {
+    color: var(--job-color);
+}
+
+/* new: skills + subsection styling */
+.subSectionTitle {
+    color: var(--subTitle-color);
+    margin-top: 1rem;
+}
+
+.skills-box ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+}

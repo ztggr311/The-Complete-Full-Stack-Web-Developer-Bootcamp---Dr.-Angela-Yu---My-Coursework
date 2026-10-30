@@ -1,0 +1,11 @@
+:root {
+    --bg-color: rgb(150, 100, 255);
+    --main-text: rgb(255, 255, 255);
+
+    --font-fam: Arial, Helvetica, sans-serif;
+    --main-radius: 15px;
+    --main-padding: 1rem;
+
+    --header-bg: rgba(0, 0, 0, 0.05);
+    --center: center;
+}

@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.green {
+    color: green;
+}
+
+.inline {
+    background-color: rgb(0, 255, 255);
+}
+
+.internal {
+    background-color: rgb(255, 100, 255);
+}
+
+.external {
+    background-color: rgb(255, 255, 100);
+}
+
+.home {
+    background-color: rgb(150, 100, 255);
+    color: rgb(255, 255, 255);
+}
+
+.home a,
+.internal a,
+.inline a,
+.external a {
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    padding: 0.5rem;
+}
+
+.home a:hover,
+.internal a:hover,
+.inline a:hover,
+.external a:hover {
+    cursor: pointer;
+}
+
+.home a {
+    color: rgb(0, 255, 255);
+}
+
+.home a:hover {
+    color: rgb(255, 0, 255);
+}
+
+.inline a {
+    color: rgb(255, 0, 255);
+}
+
+.inline a:hover {
+    color: rgb(150, 0, 255);
+}
+
+.internal a {
+    color: rgb(90, 0, 150);
+}
+
+.internal a:hover {
+    color: rgb(255, 0, 180);
+}
+
+.external a {
+    color: rgb(0, 0, 150);
+}
+
+.external a:hover {
+    color: rgb(0, 180, 255);
+}
