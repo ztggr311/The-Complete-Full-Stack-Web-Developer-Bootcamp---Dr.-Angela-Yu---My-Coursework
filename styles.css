@@ -1,65 +1,166 @@
+:root {
+
+    /* BACKGROUNDS */
+
+    --bg-color: rgb(150, 100, 255);
+
+    --div-bg: rgba(0, 0, 0, 0.05);
+
+    --h2-bg: rgba(0, 255, 255, 0.5);
+    --h3-bg: rgba(255, 0, 255, 0.5);
+
+    --link-bg: rgba(0, 0, 0, 0.15);
+    --link-bg-hover: rgba(0, 0, 0, 0.25);
+
+    /* TEXT COLORS */
+
+    --text-color: rgb(255, 255, 255);
+
+    --link-color: rgb(0, 255, 255);
+    --link-hover-color: rgb(255, 0, 255);
+
+    --number-color: rgb(255, 100, 255);
+    --number-hover-color: rgb(255, 255, 255);
+
+    /* SHADOWS */
+
+    --shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+
+    /* BORDER RADIUS */
+
+    --border-radius: 15px;
+
+    /* SPACING */
+
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1rem;
+
+    /* WIDTHS */
+
+    --section-width: 80%;
+    --link-width: 60%;
+}
+
 body {
-    background-color: rgb(150, 100, 255);
-    color: rgb(255, 255, 255);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
     font-size: 28px;
-    border-radius: 15px;
-    margin: 1rem;
-    padding: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.05);
+
+    margin: var(--spacing-md);
+    padding: var(--spacing-xs);
+
+    border-radius: var(--border-radius);
+
+    background-color: var(--div-bg);
+    box-shadow: var(--shadow);
 }
 
 h2 {
-    width: 80%;
-    border-radius: 15px;
-    margin: 1rem;
-    padding: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.05);
+    width: 95%;
+
+    margin: var(--spacing-md);
+    padding: var(--spacing-xs);
+
+    border-radius: var(--border-radius);
+
+    background-color: var(--h2-bg);
+    box-shadow: var(--shadow);
 }
 
 .coursework {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .exercises,
 .projects,
 .capstone {
-    width: 50%;
+    width: var(--section-width);
 }
 
 div {
-    background-color: rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 15px;
-    margin: 1rem;
-    padding: 0.5rem;
+
+    margin: var(--spacing-md);
+    padding: var(--spacing-xs);
+
+    border-radius: var(--border-radius);
+
+    background-color: var(--div-bg);
+    box-shadow: var(--shadow);
 }
 
 h3 {
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 15px;
-    margin: 0.5rem;
-    padding: 0.5rem;
     width: 80%;
+
+    margin: var(--spacing-xs);
+    padding: var(--spacing-xs);
+
+    border-radius: var(--border-radius);
+
+    background-color: var(--h3-bg);
+    box-shadow: var(--shadow);
 }
 
-a {
-    width: 50%;
+/* ========================================
+   CUSTOM NUMBERED LIST PILLS
+======================================== */
+
+ol {
+    list-style: none;
+    counter-reset: item;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    counter-increment: item;
+
+    margin-bottom: var(--spacing-md);
+}
+
+li a {
+    display: block;
+
+    width: var(--link-width);
+
+    margin: 0 auto;
+    padding: var(--spacing-sm) var(--spacing-md);
+
+    border-radius: var(--border-radius);
+
+    background-color: var(--link-bg);
+    box-shadow: var(--shadow);
+
+    color: var(--link-color);
     text-decoration: none;
-    color: rgb(0, 255, 255);
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 15px;
-    margin: 0.5rem;
-    padding: 0.5rem;
+
+    text-align: center;
 }
 
-a:hover {
-    color: rgb(255, 0, 255);
+li a::before {
+    content: counter(item) ") ";
+
+    color: var(--number-color);
+    font-weight: bold;
+}
+
+li a:hover {
+    background-color: var(--link-bg-hover);
+    color: var(--link-hover-color);
+}
+
+li a:hover::before {
+    color: var(--number-hover-color);
 }
